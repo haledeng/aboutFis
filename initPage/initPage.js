@@ -22,12 +22,12 @@ var inlineJsTpl = "require.async(['zepto', 'common', '${name}'], function($, T, 
 var speedAndPvReportTpl = "function speedAndPvReport(){\r\n" + 
 	"\twindow.speedOpts = {\r\n" + 
     "\t\tcgiTotal: 1,\r\n" + 
-    "\t\tisdFlags: '7832-56-'+ (window.isPack?'20':'65')\r\n" + 
+    "\t\tisdFlags: '上报id')\r\n" + 
 	"\t};\r\n" + 
 	"\t__inline('/inline/speed.inline.js');\r\n" + 
 	"\twindow.packReportOpts = {\r\n" + 
-    "\t\tpackMid: 615625,\r\n" + 
-    "\t\tunpackMid: 615626\r\n" + 
+    "\t\tpackMid: 0,\r\n" + 
+    "\t\tunpackMid: 0\r\n" + 
 	"\t};\r\n" + 
 	"\t__inline('/inline/packReport.inline.js');\r\n" + 
 	"}\r\n",

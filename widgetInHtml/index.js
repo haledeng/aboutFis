@@ -14,7 +14,6 @@ module.exports = function (ret, conf, setting, opt) {
 		if(file.isHtmlLike){
 			var content = file.getContent();
 			if((matches = content.match(widget_reg))){
-				// 处理css文件依赖
 				var htmlFilename = matches[1],
 					cssFilename = htmlFilename.replace('.html', '.scss'),
 					htmlFile = fis.file.wrap(htmlFilename),

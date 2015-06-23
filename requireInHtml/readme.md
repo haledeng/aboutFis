@@ -21,3 +21,7 @@ html 片段放在 html 文件中，对应的样式放在 css 文件中，产品�
     获取对应的 cdn 路径，以 link 方式引入。
 
     ```<!-- require(modules/test/widget/index.scss) -->```
+3. 使用特殊标签引入所需的html片段， 在 postpackage 中解析标签，替换成对应的 html 代码，并且读取同级路径下，同名的 css 文件引入。
+
+    ```<widget src="modules/test/widget/index.html">```
+

@@ -14,9 +14,12 @@ html 片段放在 html 文件中，对应的样式放在 css 文件中，产品�
 
 ===
 ### 解决方案
-1. 通过 link inline到页面中，然后使用插件将 inline 的样式文件提取到 head 头里面。
+1. 在引入的模块中，通过 link inline到页面中，然后使用 fis 插件将 inline 的样式文件提取到 head 头里面。
     + 优点： 引入简单，通用
     + 缺点： 样式对应不到源文件，修改不方便。
+
+    ```<link rel="stylesheet" type="text/css" href="header.css">```
+    
 2. 使用注释的命令字引入样式，在 postpackage 中读取对应的文件进行处理，这里既可以读取源文件将样式直接插入到 html 中，又可以通过 map 
     获取对应的 cdn 路径，以 link 方式引入。
 

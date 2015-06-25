@@ -16,3 +16,22 @@
 **疑问： 为啥不直接把 usedList 对应的图片产出到目录？**
 
 `这里因为有 sprite 的问题，产出时会生成新的图片，但是不包含在 usedList 中`
+
+
+===
+### 配置
++ modules 里面加上
+  
+  ```deploy: ['default', 'test']```
+
++ settings 加上
+
+  ```
+  fis.config.set('settings.deploy.test', {
+      publish : {
+          from : '/',
+          to: '../dist'
+      }
+  });
+  
+  ```

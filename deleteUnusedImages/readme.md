@@ -19,15 +19,22 @@
 
 
 ===
+### 安装
+
+```
+npm install -g fis-deploy-delete-unused-images
+```
+
+===
 ### 配置
 + modules 里面加上
   
-  ```deploy: ['default', 'test']```
+  ```deploy: ['default', 'delete-unused-images']```
 
 + settings 加上
 
   ```
-  fis.config.set('settings.deploy.test', {
+  fis.config.set('settings.deploy.delete-unused-images', {
       publish : {
           from : '/',
           to: '../dist'

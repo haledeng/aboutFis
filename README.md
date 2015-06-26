@@ -10,8 +10,12 @@
 
 ===
 ### widgetInHtml
-使用 widget 方式加载 html 片段，由构建自动读取对应的 css 文件。
+使用 widget 方式加载 html 片段，由构建自动读取对应的 css 文件。这里以一种组件化的方式加载 html 和 css, 暂时不考虑 js。
+
+```
+<widget src="xxx/xxx/xxx.html">
+```
 
 ===
-###deleteUnusedImages
-fis 产出时将无用的图片干掉。
+### deleteUnusedImages
+fis 产出时将没有被css 和 html 引用的图片干掉。这里没有考虑 js 里面拼接字符串引用的图片。
